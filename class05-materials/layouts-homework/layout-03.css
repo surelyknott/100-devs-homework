@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+header, footer{
+    height: 100px;
+    border: 3px black solid;
+    clear: both;
+}
+section{
+    height: 400px;
+    width: 20%;
+    border: 3px black solid;
+    float: left;
+}
+.thiccOne{
+    width: 40%;
+}

@@ -1,0 +1,253 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.roboto-thin {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+main{
+  margin: 0 20px;
+}
+h1{
+  font-size: 36px;
+}
+a{
+  font-size: 16px;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  height: 50px;
+  background: black;
+  color: white;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+nav *{
+  float: left;
+  width: 10%;
+  padding: 0;
+  margin: 0 5px;
+  display: block;
+  list-style: none;
+  color: white;
+}
+nav ul{
+  width: 60%;
+}
+nav ul li{
+  border-left: 1px solid white;
+}
+nav form input{
+  width: 100%;
+}
+section.historic{
+  height: 400px;
+  border: 1px solid black;
+}
+section.bigLefty{
+  width: 50%;
+  float: left;
+}
+section.articleSquares{
+  width: 50%;
+  float: left;
+}
+section.articleSquares li{
+  width: 50%;
+  height: 200px;
+  float: left;
+  border: 1px solid black;
+  list-style: none;
+}
+.articleSquares > h2{
+  float: right;
+  text-align: right;
+  width: 80%;
+}
+div section{
+  width: 33.3333%;
+  padding-top: 20px;
+  float: left;
+}
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+/******************************************
+/* MEDIA QUERIES: max-width: 299px
+/*******************************************/
+
+@media screen and (max-width: 299px){
+  .loseSmall{
+    display: none;
+  }
+}
+
+/******************************************
+/* MEDIA QUERIES: min-width: 300px
+/*******************************************/
+
+@media screen and (min-width: 300px){
+  .loseSmall{
+    display: none;
+  }
+  nav ul li{
+    width: 20%;
+  }
+}
+/******************************************
+/* MEDIA QUERIES: max-width: 500px
+/*******************************************/
+
+@media screen and (max-width: 500px){
+section.bigLefty{
+  width: 100%;
+  float: left;
+  }
+section.articleSquares{
+  width: 90%;
+  float: left;
+}
+}
+
+/******************************************
+/* MEDIA QUERIES: max-width: 820px
+/*******************************************/
+
+@media screen and (max-width: 820px){
+  section.articleSquares li{
+    width: 100%;
+    height: 100px;
+    float: right;
+    border: 1px solid black;
+    list-style: none;
+  }
+  section.articleSquares h2{
+    font-size: 12px;
+    margin: 26px 0;
+  } 
+  .tripleWhammy {
+    width: 100%; /* Align to the left side */
+    float: left; /* Ensure the container aligns left */
+    padding-bottom: 30px;
+  }
+}
+
+/******************************************
+/* MEDIA QUERIES: min-width: 1000px
+/*******************************************/
+
+@media screen and (min-width: 1000px){
+  .loseSmall{
+    display: block;
+  }
+  nav ul li{
+    width: 10%;
+  }
+}
+

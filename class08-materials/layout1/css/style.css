@@ -1,0 +1,298 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+.roboto-thin {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+h1{
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+h2{
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+h3, p{
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: grey;
+}
+
+a{
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: grey;
+  text-decoration: none;
+}
+
+html section h3.theLatest{
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-size: 12px;
+  color: black;
+}
+
+span{
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 8px;
+}
+
+li{
+  list-style: none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.tcLogo{
+  width: 70px;
+}
+.extraCrunch{
+  width: 100px;
+}
+.chinaFintech{
+  max-width: 80%;
+}
+.wonderWoman{
+  max-width: 70%;
+  padding: 10px 0;
+}
+nav, main, aside{
+  float: left;
+  width: 10%;
+}
+ul{
+  padding: 0 20px 0 5px;
+}
+
+span{
+  display: block;
+}
+img{
+  display: block;
+}
+.wonderLeft, .wonderCenter{
+  display: inline;
+  width: 25%;
+  margin-right: 30px;
+  float: left;
+}
+.totalGroup{
+  max-width: 80%;
+  float: left;
+  padding-left: 40px;
+}
+
+/******************************************
+/* MEDIA QUERIES: max-width: 299px
+/*******************************************/
+
+@media screen and (max-width: 299px){
+  .bottomhalfNews, aside{
+    display: none;
+  }
+}
+
+/******************************************
+/* MEDIA QUERIES: min-width: 300px
+/*******************************************/
+
+@media screen and (min-width: 300px){
+  nav{
+    width: 10%;
+    padding: 0 20px 0 10px;
+  }
+  .mainContainer > * {
+    margin: 5px 0;
+  }
+  .totalGroup{
+    margin-left: 20px;
+  }
+  .rightNews{
+    display: none;
+  }
+  section > h3{
+    width: 80%;
+    margin: 10px 0;
+  }
+  section.wonderLeft{
+    width: 80%;
+  }
+
+  .wonderLeft > h2{
+    padding-bottom: 10px;
+    margin: 0;
+  }
+   
+  html section .wonderLeft span{
+    width: 80%;
+    float: left;
+  }
+  section.wonderCenter{
+    display: none;
+  }
+}
+
+/******************************************
+/* MEDIA QUERIES: min-width: 750px
+/*******************************************/
+
+@media screen and (min-width: 750px){
+  section.mainContainer{
+    width: 70%;
+    padding-right: 0;
+    float: left;
+  }
+  h1{
+    padding-right: 20px;
+    width: 90%;
+  }
+  section.rightNews {
+    float: right; /* Align section to the right */
+    display: block;
+    width: 30%; /* Define a width for the section */
+    margin-top: 5px;
+    padding-right: 50px;
+  }
+  html section.rightNews aside {
+    width: 100%; /* Use full width of the parent section */
+  }
+  section.rightNews ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove bullets */
+  }
+  section.rightNews ul li {
+    margin-bottom: 15px; /* Add spacing between list items */
+  }
+  section.rightNews ul li h2 {
+    font-size: 20px;
+    margin: 0 0 5px; /* Add spacing below the heading */
+  }
+  section.rightNews ul li span {
+    font-size: 12px;
+    color: gray; /* Style the metadata */
+  }
+  h3.theLatest{
+    float: left;
+    width: 50%;
+  }
+  div.bottomhalfNews{
+    width: 70%;
+    float: left;
+  }
+  section.wonderLeft{
+    width: 25%;
+    margin-top: 5px;
+    float: left;
+  }
+  section.wonderCenter{
+    width: 50%;
+    display: block;
+    float: left;
+  }
+  .wonderCenter > p{
+    margin-top: 0;
+  }
+  .wonderWoman{
+    float: left;
+    width: 50%;
+  }
+}
+
+

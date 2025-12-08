@@ -1,0 +1,65 @@
+    body{
+    background: rgb(135, 206, 235);
+    border: 5px solid rgb(72, 205, 50);
+    margin: 30px;
+    padding: 30px 20px;
+    }
+    h1{
+        font-family: Vollkorn, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+    }
+    ul {
+        list-style:none;
+      }
+      ul li{
+        display:inline-block; 
+        padding:0 7px; 
+        position:relative;
+      }
+      ul li:not(:last-child)::after{
+        content:""; 
+        border:3px solid #8c8c8c;
+        border-width: 2px 2px 0 0;
+        position:absolute; 
+        right:-3px; 
+        top:5px; 
+        height:50%;
+      }
+    .zebra nav {
+        color: white;
+    }
+    a:link {
+        color: lightgreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:visited {
+        color: rgb(72, 205, 50);
+        background-color: transparent;
+        text-decoration: none;
+      }
+    nav{
+        font-family: Rubik, Helvetica, sans-serif;
+        font-size: 15px;
+        text-align: center;  
+    }
+    nav.ghost{
+        padding-top: 25px;
+    }
+    h2{
+        font-family: Rubik, Helvetica, sans-serif;
+        color: white;
+        margin-left: 40px;
+        margin-bottom: -15px;
+    }
+    p{
+        color: white;
+        margin: 40px;
+        margin-bottom: -15px;
+    }
+    img{
+        float: right;
+        height: 240px;
+        margin-right: 40px;
+    }

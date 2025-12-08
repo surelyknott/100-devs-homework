@@ -1,0 +1,324 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* Base Styles
+/*******************************************/
+body{
+  max-width: 100%;
+  height: 3500px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div{
+  max-width: 100%;
+  height: 500px;
+}
+
+/******************************************
+/* Header
+/*******************************************/
+header * {
+  display: inline-block;
+  float: right;
+  max-width: 100%;
+}
+header li{
+  float: left;
+}
+header{
+  height: 125px;
+}
+header ul{
+  padding: 0;
+  margin: 0 ;
+}
+header img, header li{
+  margin: 15px;
+}
+nav{
+  font-size: 12px;
+}
+.bigHead *{
+  z-index: 2;
+}
+
+/******************************************
+/* Welcome Section
+/*******************************************/
+header + section{
+  max-width: 100%;
+  clear: both;
+}
+.welcomeGroup h1{
+  text-align: left;
+  padding: 0px 20px 30px 80px;
+  margin: 0;
+  font-size: 65px;
+}
+.welcomeGroup input{
+  margin-left: 80px;
+  width: 40%;
+}
+.socialTrio img:nth-child(1) {
+  margin-left: 80px;
+}
+.socialTrio span{
+  margin-right: 20px;
+}
+.socialTrio *{
+  padding-top: 30px;
+}
+.socialTrio{
+  height: 30px;
+}
+
+/******************************************
+/* About Us Section
+/*******************************************/
+.aboutUs{
+  max-width: 50%;
+  margin: 60px 120px 20px 0;
+  float: right;
+}
+.aboutUs h2{
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.aboutUs span{
+  color: orange;
+}
+.aboutUs{
+  z-index: 2;
+}
+
+/******************************************
+/* Specialty Cuisine Section
+/*******************************************/
+.specialtyCuisine{
+  text-align: center;
+  height: 600px;
+}
+.specialtyWithin *{
+  max-width: 100%;
+}
+.specialtyWithin{
+  margin-top: 50px;
+}
+.specialtyWithin h2{
+  font-size: 48px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.specialtyWithin li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+.specialtyWithin span{
+  color: orange;
+}
+.specialtyWithin a{
+  text-decoration: none;
+}
+.specialtyWithin nav ul{
+  padding: 0;
+}
+.foodImage{
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+/******************************************
+/* Opening Hours Section
+/*******************************************/
+html body div.openingHours{
+  text-align: center;
+  height: 840px;
+}
+.openingWithin{
+  max-width: 100%;
+}
+.openingWithin h2{
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.openingWithin br + span + h5{
+  color: orange;
+  font-size: 24px;
+  margin: 0;
+  padding: 15px 0;
+}
+.openingWithin li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+.openingWithin span{
+  color: orange;
+}
+.containDays{
+  overflow: hidden; /* This forces the container to wrap the floated children */
+  height: 40px;
+}
+.containDays span{
+  float: left; /* Float elements to sit side by side */
+  width: 50%; /* Each element takes 50% of the parent container */
+  box-sizing: border-box; /* Include padding and borders in the width */
+  padding: 15px 0; /* Optional padding for better spacing */
+  text-align: center; /* Center-align the text */
+  margin: 0; /* Reset margins */
+  color: black;
+}
+.containTimes{
+  overflow: hidden; /* This forces the container to wrap the floated children */
+  height: 50px;
+  margin-bottom: 30px;
+}
+/* Target the h5 elements within .openingWithin */
+.containTimes h5{
+  float: left; /* Float elements to sit side by side */
+  width: 50%; /* Each element takes 50% of the parent container */
+  box-sizing: border-box; /* Include padding and borders in the width */
+  padding: 15px 0; /* Optional padding for better spacing */
+  text-align: center; /* Center-align the text */
+  margin: 0; /* Reset margins */
+  font-size: 18px;
+}
+.openingWithin a{
+  text-decoration: none;
+}
+.openingWithin nav ul{
+  padding: 0;
+}
+.breakfastBowl{
+  display: inline-block;
+  max-width: 55%;
+  }
+
+/******************************************
+/* Specialty Cuisine Section
+/*******************************************/
+html body .testimonials{
+  text-align: center;
+  height: 800px;
+}
+.testimonialsWithin{
+  max-width: 100%;
+  margin: 10px 130px;
+}
+.testimonialsWithin h3{
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.testimonialsWithin h5{
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.testimonialsWithin span + img,
+.testimonialsWithin span{
+  display: inline-block;
+  width: 100px;
+}
+.testimonialsWithin h5 + span{
+  margin-bottom: 20px;
+}
+.testimonialsWithin p{
+  line-height: 40px;
+  font-style: italic;
+  padding: 0 40px;
+}
+.circleContain{
+  max-width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.circle{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px 0;
+  border: 1px solid black;
+  border-radius: 100%;
+  text-align: center;
+}
+
+/******************************************
+/* Links and Buttons
+/*******************************************/
+a{
+  text-decoration: none;
+  color: black;
+}
+button{
+  color: white;
+  background-color: orange;
+  border-color: orange;
+}
+
+/******************************************
+/* Typography
+/*******************************************/
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3{
+  font-family: "Rohza One", serif;
+}
+
+/******************************************
+/* Background images
+/*******************************************/
+.bigHead{
+  background-image: url('/Users/jackknott/Desktop/100Devs/class10-materials/layout-photos/pngtree-citrus-fruit-on-white-background-with-leaves-fruit-top-view-image_13151913.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;  /* Specify a height for the element to show the background */
+  z-index: 1;
+}
+.discover{
+  background-image: url('/Users/jackknott/Desktop/100Devs/class10-materials/layout-photos/porridge-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;  /* Specify a height for the element to show the background */
+  z-index: 1;
+}
+
+/******************************************
+/* Media Queries
+/*******************************************/
+@media screen and (max-width: 860px){
+  html body .specialtyCuisine{
+    height: 750px;
+  }
+  html body div.openingHours{
+    height: 550px;
+  } 
+}

@@ -1,0 +1,439 @@
+/******************************************
+/* Box Model Hack
+/*******************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+/******************************************
+/* Clearfix Hack
+/*******************************************/
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* Base Styles
+/*******************************************/
+
+body{
+    max-width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+.heroDiv{
+  max-width: 100%;
+  max-height: 650px;
+  float: left;
+}
+.bottomDiv{
+  max-width: 100%;
+  height: 300px;
+  padding: 20px 20px 0 50px;
+  float: left;
+  clear: both;
+}
+.bottomDiv p{
+  color: grey;
+}
+
+/******************************************
+/* Hero
+/*******************************************/
+section.sourceHelps{
+  max-width: 50%;
+  float: left;
+}
+.sourceHelps{
+  padding: 160px 80px 20px 120px;
+}
+.sourceHelps h1{
+  margin-top: 10px;
+}
+.sourceHelps button, .sourceHelps input{
+  display: inline;
+  float: left;
+}
+.sourceHelps button{
+  margin: 0;
+}
+.sourceHelps p{
+  clear: both;
+  padding-top: 10px;
+}
+section.gadgetPic{
+  max-width: 50%;
+  float: right;
+}
+.gadgetPic img{
+  width: 800px;
+  max-width: 100%;
+  padding-top: 20px;
+  float: right;
+}
+
+/******************************************
+/* Columns
+/*******************************************/
+.columnHolder{
+  float: left;
+  margin: 50px 120px 20px 120px;
+  max-width: 100%;
+  max-height: 400px;
+}
+.fourColumns{
+  float: left;
+  max-width: 25%;
+  padding: 0 30px;
+}
+
+/*
+  ========================================
+  Links and Buttons
+  ========================================
+*/
+a{
+    color: grey;
+    text-decoration: none;
+}
+button{
+  color: white;
+  border-radius: 5px;
+  background-color: rgba(49, 70, 80, 1);
+}
+.fourColumns a{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+h1, h2, h3, h4, h5, p, span, a{
+  color: rgba(49, 70, 80, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+span{
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+p{
+  font-size: 12px;
+}
+h1{
+  font-size: 36px;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+header{
+  max-width: 100%;
+  height: 70px;
+}
+html body .bigHead img{
+  width: 160px;
+  float: left;
+}
+ul{
+  padding-left: 200px;
+  margin-top: 5px;
+}
+nav, ul, li{
+  float: left;
+}
+nav li{
+  list-style: none;
+  margin-left: 0;
+}
+nav a{
+  text-decoration: none;
+}
+button{
+  float: right;
+  padding-right: 30px;
+  margin-top: 5px;
+}
+
+/*
+  ========================================
+  Media Queries: max-width 374px
+  ========================================
+*/
+@media screen and (max-width: 374px){
+  html body .bigHead img{
+    width: 160px;
+  }
+}
+  /* Style the container for the menu icon */
+  html body .menu-icon {
+    float: left;
+    cursor: pointer; /* Add a pointer cursor for interactivity */
+    width: 35px; /* Width of the entire menu */
+    height: 30px; /* Height of the total menu area */
+    margin: 20px 0 0 30px;
+    position: relative; /* Relative for positioning the spans */
+  }
+  
+  /* Style each line (span) */
+  html body .menu-icon span {
+    display: block;
+    background-color: rgba(49, 70, 80, 1); /* Dark color for the lines */
+    height: 4px; /* Thickness of each line */
+    width: 100%; /* Full width of the menu */
+    margin-bottom: 10px; /* Space between lines */
+    border-radius: 2px; /* Slight rounding for smoother lines */
+  }
+  
+  /* Remove margin for the last line */
+  html body .menu-icon span:last-child {
+    margin-bottom: 0;
+    }
+
+/*
+  ========================================
+  Media Queries: min-width 375px
+  ========================================
+*/
+@media screen and (min-width: 375px){
+  html body html body .bigHead img{
+    width: 160px;
+  }
+  /* Style the container for the menu icon */
+  html body .menu-icon {
+    float: left;
+    cursor: pointer; /* Add a pointer cursor for interactivity */
+    width: 50px; /* Width of the entire menu */
+    height: 30px; /* Height of the total menu area */
+    margin: 20px 0 0 50px;
+    position: relative; /* Relative for positioning the spans */
+  }
+  
+  /* Style each line (span) */
+  html body .menu-icon span {
+    display: block;
+    background-color: rgba(49, 70, 80, 1); /* Dark color for the lines */
+    height: 5px; /* Thickness of each line */
+    width: 100%; /* Full width of the menu */
+    margin-bottom: 10px; /* Space between lines */
+    border-radius: 2px; /* Slight rounding for smoother lines */
+  }
+  
+  /* Remove margin for the last line */
+    .menu-icon span:last-child {
+    margin-bottom: 0;
+    }
+    html body header img{
+      max-width: 100%;
+      margin-right: 40px;
+      float: right;
+    }
+  }
+/*
+  ========================================
+  Media Queries: max-width 515px
+  ========================================
+*/
+@media screen and (max-width: 515px){
+  html body .sourceHelps h1{
+    font-size: 50px;
+  }
+  html body .sourceHelps p{
+    font-size: 20px;
+  }
+  html body .sourceHelps span{
+    font-size: 18px;
+  }
+}
+
+/*
+  ========================================
+  Media Queries: max-width 700px
+  ========================================
+*/
+
+@media screen and (max-width: 700px) {
+  nav ul li{
+    display: none;
+  }
+  header{
+    border-bottom: 1px solid grey;
+    margin-bottom: 50px;
+  }
+  html body .sourceHelps{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .sourceHelps h1{
+    font-size: 72px;
+  }
+  .sourceHelps span{
+    font-size: 36px;
+  }
+  .sourceHelps input,
+  .sourceHelps button,
+  .sourceHelps p {
+    max-width: 100%;
+  }
+  .sourceHelps input,
+  .sourceHelps button{
+    height: 40px;
+  }
+  .sourceHelps button{
+    font-size: 20px;
+  }
+  input{
+    font-size: 20px
+  }
+  .sourceHelps p{
+    font-size: 28px;
+    color: rgba(115, 132, 146, 1);
+    padding-top: 20px;
+  }
+  html body .gadgetPic{
+    max-width: 100%;
+  }
+  html body .gadgetPic img{
+    float: left;
+    max-width: 100%;
+  }
+
+  /* Display none */
+  .fourColumns{
+    display: none;
+  }
+  .bottomDiv * {
+    display: none;
+  }
+  header button{
+    display: none;
+  }
+} 
+
+/*
+  ========================================
+  Media Queries: min-width 701px
+  ========================================
+*/
+@media screen and (min-width: 701px) {
+  .menu-icon{
+    display: none;
+  }
+  html body .bigHead img{
+    width: 120px;
+  }
+}
+
+/*
+  ========================================
+  Media Queries: max-width 1149px
+  ========================================
+*/
+@media screen and (max-width: 1149px) {
+  header img{
+    margin-left: 20px;
+  }
+  header ul{
+    margin-top: 15px;
+    padding-left: 30px;
+  }
+  header li{
+    margin-right: 20px;
+  }
+  header button{
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}
+
+/*
+  ========================================
+  Media Queries: min-width 1150px
+  ========================================
+*/
+@media screen and (min-width: 1150px) {
+  header img{
+    margin-left: 20px;
+  }
+  header ul{
+    margin-top: 15px;
+  }
+  header li{
+    margin-right: 80px;
+  }
+  header button{
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+}
+
+/*
+  ========================================
+  Media Queries: max-width 1200px
+  ========================================
+*/
+@media screen and (max-width: 1200px) {
+  .sourceHelps{
+    padding-top: 50px;
+  }
+}
+/*
+  ========================================
+  Media Queries: min-width 1201px
+  ========================================
+*/
+@media screen and (min-width: 1201px) {
+  .sourceHelps{
+    padding-top: 50px;
+  }
+  .sourceHelps{
+    padding-top: 80px;
+  }
+  .sourceHelps h1{
+    font-size: 48px;
+  }
+}
+/*
+  ========================================
+  Media Queries: max-width 875px
+  ========================================
+*/
+@media screen and (max-width: 875px) {
+  .sourceHelps{
+    padding-top: 0px;
+    padding: 20px 20px 20px 60px;
+  }
+  .columnHolder{
+    margin-left: 20px;
+    margin-right: 20px
+  }
+}
+/*
+  ========================================
+  Media Queries: min-width 876px
+  ========================================
+*/
+@media screen and (min-width: 876px){
+  .bottomDiv{
+    padding-left: 120px;
+    padding-right: 50px;
+    padding-top: 20px;
+  }
+}
+
