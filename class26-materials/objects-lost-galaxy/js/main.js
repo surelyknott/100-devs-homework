@@ -1,5 +1,24 @@
 //Create a pizza object that has four properties and three methods
 
+let pizzaTest = {}
+
+pizzaTest.size = 'large'
+pizzaTest.toppings = ['mushrooms', 'ham', 'red onion', 'chicken']
+pizzaTest.base = 'barbecue'
+pizzaTest.company = 'dominos'
+
+pizzaTest.burnt = function(){
+    console.log('AAAGggHHHhhHHH')
+}
+
+pizzaTest.deviveryTime = function(){
+    console.log('Calculating...')
+}
+
+pizzaTest.deal = function(){
+    console.log(`You qualify for another small ${pizzaTest.company} pizza!`)
+}
+
 function Pizza (company, size, toppingOne, toppingTwo){
 
 this.company = company
