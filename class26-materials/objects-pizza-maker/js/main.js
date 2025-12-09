@@ -21,6 +21,8 @@ pizzaTest.deal = function(){
 
 function PizzaBuilder (company, size, toppings, sauce){
 
+PizzaBuilder.prototype.cheese = true
+
 this.company = company
 this.size = size
 this.toppings = toppings
