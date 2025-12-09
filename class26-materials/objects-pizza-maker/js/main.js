@@ -19,12 +19,12 @@ pizzaTest.deal = function(){
     console.log(`You qualify for another small ${pizzaTest.company} pizza!`)
 }
 
-function PizzaBuilder (company, size, toppingOne, toppingTwo){
+function PizzaBuilder (company, size, toppings, sauce){
 
 this.company = company
 this.size = size
-this.toppingOne = toppingOne
-this.toppingTwo = toppingTwo
+this.toppings = toppings
+this.sauce = sauce
 
     this.deal = function(){
         console.log(`The deal wizard has made your ${this.size} ${this.company} pizza half price!`)
@@ -40,6 +40,6 @@ this.toppingTwo = toppingTwo
 
 }
 
-let dominosOrder = new PizzaBuilder ('Dominos', 'large', 'pepperoni', 'red onion')
+let dominosOrder = new PizzaBuilder ('Dominos', 'large', ['pepperoni', 'sweetcorn', 'chicken'], 'bbq')
 
-let papaJohnsOrder = new PizzaBuilder ('Papa Johns', 'double XL','ground beef', 'ham')
+let papaJohnsOrder = new PizzaBuilder ('Papa Johns', 'double XL',['ground beef', 'ham', 'mushroom'], 'tomato')
