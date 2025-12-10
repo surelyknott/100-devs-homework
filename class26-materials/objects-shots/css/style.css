@@ -34,9 +34,9 @@ h3{
 
 .drink {
   position: absolute;
-  top: 22%; /* adjust so it fits inside your transparent window */
-  left: 22%;
-  width: 56%; /* so it fits inside the window without stretching */
+  top: 33%; /* adjust so it fits inside your transparent window */
+  left: 31%;
+  width: 38%; /* so it fits inside the window without stretching */
   height: auto;
   object-fit: contain; /* IMPORTANT: keeps aspect ratio */
   z-index: 1;
@@ -45,6 +45,7 @@ h3{
 .tiki-frame {
   position: relative;
   width: 500px;
+  border-radius: 10%;
   height: auto;
   z-index: 2;
 }

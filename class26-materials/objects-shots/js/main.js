@@ -10,7 +10,8 @@ function getDrink(){
       .then(data => {
         console.log(data.drinks)
         document.querySelector('h2').innerText = data.drinks[0].strDrink
-        document.querySelector('img').src = data.drinks[0].strDrinkThumb
+        // document.querySelector('img').src = data.drinks[0].strDrinkThumb
+        document.querySelector('#drink-img').src = data.drinks[0].strDrinkThumb
         document.querySelector('.ingredients').innerText = data.drinks[0].strIngredient1
         document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
         
