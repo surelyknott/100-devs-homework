@@ -12,8 +12,30 @@ function getDrink(){
         document.querySelector('h2').innerText = data.drinks[0].strDrink
         // document.querySelector('img').src = data.drinks[0].strDrinkThumb
         document.querySelector('#drink-img').src = data.drinks[0].strDrinkThumb
-        document.querySelector('.ingredients').innerText = data.drinks[0].strIngredient1
-        document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
+
+       let ingredientsList = '';
+       let ingredientImages = '';
+
+       for (let i = 1; i <= 15; i++) {
+       let ing = data.drinks[0][`strIngredient${i}`];
+
+       if (ing) {
+           // Add the small image to the row
+           ingredientImages += `
+          <img class="ingredient-icon" 
+               src="https://www.thecocktaildb.com/images/ingredients/${ing}-Small.png" 
+               alt="${ing}">
+           `;
+
+           // Add the ingredient name to the list
+           ingredientsList += `<li>${ing}</li>`;
+       }
+    }
+
+    // Push into the DOM
+    document.querySelector('.ingredient-images').innerHTML = ingredientImages;
+    document.querySelector('.ingredients').innerHTML = ingredientsList;
+    document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
         
       })
       .catch(err => {
