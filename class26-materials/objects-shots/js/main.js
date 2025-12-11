@@ -42,3 +42,7 @@ function getDrink(){
           console.log(`error ${err}`)
       });
 }
+
+// Make the cocktailDB API work with spaces between the names (i.e Dark and Stormy)
+
+// Find three APIs and build three simple apps using those APIs (github public API list)
