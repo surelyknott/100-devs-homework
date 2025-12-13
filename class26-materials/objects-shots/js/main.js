@@ -8,41 +8,61 @@ function getDrink(){
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choice}`)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+
+        let drinks = data.drinks
+        let randomIndex = Math.floor(Math.random() * drinks.length)
+        let drink = drinks[randomIndex]
+
         console.log(data.drinks)
-        document.querySelector('h2').innerText = data.drinks[0].strDrink
-        // document.querySelector('img').src = data.drinks[0].strDrinkThumb
-        document.querySelector('#drink-img').src = data.drinks[0].strDrinkThumb
+
+        document.querySelector('h2').innerText = drink.strDrink
+        document.querySelector('#drink-img').src = drink.strDrinkThumb
 
        let ingredientsList = '';
        let ingredientImages = '';
 
        for (let i = 1; i <= 15; i++) {
-       let ing = data.drinks[0][`strIngredient${i}`];
+        
+       let ing = drink[`strIngredient${i}`];
+       let measure = drink[`strMeasure${i}`];
 
        if (ing) {
-           // Add the small image to the row
-           ingredientImages += `
-          <img class="ingredient-icon" 
-               src="https://www.thecocktaildb.com/images/ingredients/${ing}-Small.png" 
-               alt="${ing}">
-           `;
 
-           // Add the ingredient name to the list
-           ingredientsList += `<li>${ing}</li>`;
-       }
+        // Clean up measurement
+        let cleanMeasure = measure ? measure.trim() : "";
+
+        // Add ingredient image
+        ingredientImages += `
+        <img class="ingredient-icon"
+            src="https://www.thecocktaildb.com/images/ingredients/${ing}-Small.png"
+            alt="${ing}">
+        `;
+
+        // Add list entry with measurement
+        ingredientsList += `
+        <li>${cleanMeasure} ${ing}</li>
+        `;
+        }
     }
-
     // Push into the DOM
     document.querySelector('.ingredient-images').innerHTML = ingredientImages;
     document.querySelector('.ingredients').innerHTML = ingredientsList;
-    document.querySelector('.instructions').innerText = data.drinks[0].strInstructions
+    document.querySelector('.instructions').innerText = drink.strInstructions
         
       })
       .catch(err => {
           console.log(`error ${err}`)
       });
+
 }
 
 // Make the cocktailDB API work with spaces between the names (i.e Dark and Stormy)
 
 // Find three APIs and build three simple apps using those APIs (github public API list)
+
+// Other vibe-coding ideas
+// ✨ Add measurements paired with ingredients (done)
+// ✨ Add a “Shake another!” button
+// ✨ Add a preloader animation (shaker gif?)
+// ✨ Add keyboard Enter-key support
+// ✨ Add “search by ingredient” mode (filter by gin, rum, whiskey, etc.)

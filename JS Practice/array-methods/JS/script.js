@@ -74,3 +74,7 @@ let shortCopy = (arr) => arr.slice().sort();
 // let sorted = copySorted(arr);
 // alert( sorted ); // CSS, HTML, JavaScript
 // alert( arr ); // HTML, JavaScript, CSS (no changes)
+
+// Create an Extendable Calculator 
+
+// Create a constructor function Calculator that creates “extendable” calculator objects.
