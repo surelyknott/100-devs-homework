@@ -20,3 +20,22 @@ function filterRange(arr, a, b){
 let arr = [5, 3, 8, 1]
 let filtered = filterRange(arr, 1, 4)
 alert (filtered) // 3, 1
+
+// Filter range "in place"
+// Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. 
+// The test is: a ≤ arr[i] ≤ b.
+// The function should only modify the array. It should not return anything.
+
+function filterRangeInPlace(arrr, min, max){
+
+// loop through each value to see whether it's between and inclusive or parameters a and b
+    for (i = arrr.length - 1; i >= 0; i--) { //starting at the end of index as deleting from the front shifts index
+        const value = arr[i];
+        if (value < min || value > max) { 
+            arrr.splice(i, 1); // i is already being looped, and deleting just 1 element
+        }
+    }
+}
+
+let arrr = [5, 3, 8, 1];
+filterRangeInPlace(arrr, 1, 4);
