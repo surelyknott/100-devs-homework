@@ -39,3 +39,38 @@ function filterRangeInPlace(arrr, min, max){
 
 let arrr = [5, 3, 8, 1];
 filterRangeInPlace(arrr, 1, 4);
+
+// Sort in Decreasing Order
+
+// let arr = [5, 2, 1, -10, 8];
+
+function sortDecreasing(arr) {
+    arr.sort( (a, b) => b - a );
+}
+
+// alert( arr ); // 8, 5, 2, 1, -10
+
+// Copy and Sort Array 
+
+// We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+// Create a function copySorted(arr) that returns such a copy.
+
+function copySorted (arr) {
+
+let copySort = arr.slice().sort();
+
+return copySort;
+
+};
+
+// or single line version
+
+let shortCopy = (arr) => arr.slice().sort();
+
+// .slice() to copy to new array
+// .sort() to sort the new array
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+// let sorted = copySorted(arr);
+// alert( sorted ); // CSS, HTML, JavaScript
+// alert( arr ); // HTML, JavaScript, CSS (no changes)
