@@ -1,8 +1,18 @@
 //The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
 
+// Declare the shakers
+const shakers = document.querySelectorAll('.shaker');
+
 document.querySelector('button').addEventListener('click', getDrink)
 
 function getDrink(){
+
+  // Start shaking animation
+  shakers.forEach(shaker => shaker.classList.add('shake'));
+
+  // Delay the fetch by 2 seconds while shaking happens
+  setTimeout(() => {
+
   let choice = document.querySelector('input').value
 
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choice}`)
@@ -50,14 +60,17 @@ function getDrink(){
     document.querySelector('.instructions').innerText = drink.strInstructions
         
       })
-      .catch(err => {
-          console.log(`error ${err}`)
+    .catch(err => console.log(err))
+      .finally(() => {
+        // Stop shaking after fetch completes
+        shakers.forEach(shaker => shaker.classList.remove('shake'));
       });
 
+    }, 1500); // 1.5 seconds of shaking
 }
 
+// Homework tasks
 // Make the cocktailDB API work with spaces between the names (i.e Dark and Stormy)
-
 // Find three APIs and build three simple apps using those APIs (github public API list)
 
 // Other vibe-coding ideas

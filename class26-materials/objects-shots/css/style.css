@@ -49,6 +49,12 @@ body{
 h1{
   font-size: 3.5rem;
 }
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 .instructions{
   text-align: center;
 }
@@ -63,6 +69,12 @@ h1{
 /******************************************
 /* IMAGES
 /*******************************************/
+
+.shaker {
+  width: 100px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
 
 .tiki-container {
   position: relative;
@@ -101,6 +113,22 @@ h1{
   object-fit: contain;
 }
 
+/******************************************
+/* ANIMATIONS
+/*******************************************/
+
+.shake {
+  animation: shakeAnim 0.5s infinite;
+}
+
+/* Keyframes for shaking movement */
+@keyframes shakeAnim {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(15deg); }
+  50%  { transform: rotate(-15deg); }
+  75%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -108,4 +136,7 @@ h1{
 
 button {
   padding: 5px 10px;
+}
+.typeIt {
+  width: 300px;
 }
