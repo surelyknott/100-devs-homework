@@ -10,11 +10,43 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-img{
+.titleAndButton * {
   display: block;
   margin: 0 auto;
 }
 
+.titleAndButton{
+  margin: 30px;
+}
+
+.cardContainer, .p1Container, .p2Container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.p1Container, .p2Container{
+  flex-direction: column;
+}
+
+h1, h2, h3{
+  text-align: center;
+}
+
+/******************************************
+/* FONT SIZES
+/*******************************************/
+
+h1{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+button{
+  font-size: 1.5rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
