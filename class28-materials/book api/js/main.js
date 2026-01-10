@@ -15,21 +15,17 @@ function getFetch() {
   const url = `https://openlibrary.org/isbn/${choice}.json`
 
   fetch(url)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`Request failed: ${res.status}`)
-        }
-        return res.json()
-      }) // parse response as JSON
+
+      .then(res => res.json()) // parse response as JSON
       .then(data => {
-
-      console.log(data)
-      document.querySelector('p').textContent = data.title
-
-    })
-
+        console.log(data.title) // put title into localStorage
+        let books = localStorage.getItem('books') + ' ; ' + data.title
+        localStorage.setItem('books', books)
+        document.querySelector('p').innerText = localStorage.getItem('books')
+      })
+    
     .catch(err => {
           console.log(`error ${err}`)
           para.textContent = 'Book not found. Check the ISBN number and try again.'
-    })
+    });
 }
