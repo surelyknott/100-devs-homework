@@ -11,8 +11,10 @@
 /* LAYOUT
 /*******************************************/
 img{
-  display: flex
+  display: block;
+  margin: 0 auto;
 }
+
 
 /******************************************
 /* ADDITIONAL STYLES
