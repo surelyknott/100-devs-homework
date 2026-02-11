@@ -24,9 +24,12 @@ const clucker = new Chicken('Barry', 'male');
 
 class ArsenalPlayer{
     constructor(name, age, position){
-        this.name = name
+        this._name = name
         this.age = age
         this.position = position
+    }
+    get name(){
+        return this._name
     }
     goal(){
         console.log(`${this.name} scores a screamer!`)
@@ -45,3 +48,4 @@ class ArsenalNewSigning extends ArsenalPlayer{
 }
 const jackaldinho = new ArsenalNewSigning('Jackaldinho', 35, 'Right Wing', 'Napoli', 80, '3-year')
 const saka = new ArsenalPlayer('Saka', 24, 'Right Wing')
+const rice = new ArsenalPlayer('Rice', 27, 'Centre Midfield')
