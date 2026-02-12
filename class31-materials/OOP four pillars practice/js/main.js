@@ -39,3 +39,9 @@ class CooperativeBoardGame extends BoardGame {
 }
 const catan = new StrategyBoardGame('Catan', 'trading', 2.3, 3, 4, 90)
 const skyTeam = new CooperativeBoardGame('Sky Team', 'family', 2, 20)
+
+let allGames = [catan, skyTeam]
+
+for( a of allGames ){
+    a.gameStart()
+}
