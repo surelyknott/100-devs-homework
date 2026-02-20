@@ -17,10 +17,10 @@ class Contractor{
         console.log(`Hello, I'm on the ${this._role} team at #100Devs!`)
     }
 }
-class Front extends Contractor{
+class Developer extends Contractor{
     constructor(name, role, tech){
         super(name, role)
-        this._tech = tech
+        this._tech = tech 
     }
     get tech(){
         return this._tech
@@ -29,20 +29,18 @@ class Front extends Contractor{
         console.log(`Hello. I'm on the ${this._role} team at #100Devs and I use ${this._tech}.`)
     }
 }
-class Back extends Contractor{
+class Front extends Developer{
     constructor(name, role, tech){
-        super(name, role)
-        this._tech = tech
+        super(name, role, tech)
     }
-    get tech(){
-        return this._tech
-    }
-    sayHello(){
-        console.log(`Hello. I'm on the ${this._role} team at #100Devs and I use ${this._tech}.`)
+}
+class Back extends Developer{
+    constructor(name, role, tech){
+        super(name, role, tech)
     }
 }
 
-let bob = new Contractor ('Bob', 'Front-end')
+let bob = new Developer ('Bob', 'Front-end', 'JavaScript')
 let jack = new Front ('Jack', 'Front-end', 'React')
 let jermaine = new Back ('Jermaine', 'Back-end', 'Node')
 
