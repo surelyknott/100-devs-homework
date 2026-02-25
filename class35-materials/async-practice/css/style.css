@@ -10,11 +10,21 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-img{
+#dogContainer img{
+  width: 100%;
+  height: auto;
   display: block;
-  margin: 0 auto;
 }
 
+#dogContainer{
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.meme{
+  display: block;
+  margin: 20px auto;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
