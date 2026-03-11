@@ -75,3 +75,78 @@ const server = http.createServer((req, res) => { // createServer registers a req
 });
 
 server.listen(8000); // listening on an 8000 server response
+
+
+/* 
+
+const http = require('http'); // Built-in Node module for creating HTTP servers
+const fs = require('fs'); // Built-in Node module for reading files
+const figlet = require('figlet'); // External package for ASCII-art text (used for 404 output)
+
+// Reusable helper for serving static files (HTML/CSS/JS)
+function sendFile(res, filePath, contentType) {
+  // Async file read: callback runs after file is loaded (or fails)
+  fs.readFile(filePath, (err, data) => {
+    // If file read fails, fall back to 404 response
+    if (err) return send404(res);
+
+    // Send successful response with appropriate content type
+    res.writeHead(200, { 'Content-Type': contentType });
+    res.end(data);
+  });
+}
+
+// Reusable helper for JSON API responses
+function sendJSON(res, obj, status = 200) {
+  res.writeHead(status, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(obj)); // Convert JS object into JSON string
+}
+
+// Reusable helper for "not found" responses
+function send404(res) {
+  // Async call: generate stylized "404!!" text
+  figlet('404!!', (err, data) => {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    // If figlet fails, still send a plain fallback 404 message
+    res.end(err ? '404 Not Found' : data);
+  });
+}
+
+// createServer registers one request handler that runs per incoming request
+http.createServer((req, res) => {
+  // Parse incoming URL into pathname + query params using the request host
+  const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+  const pathname = parsedUrl.pathname;
+
+  // Route requests by pathname
+  switch (pathname) {
+    case '/':
+      return sendFile(res, 'index.html', 'text/html');
+    case '/otherpage':
+      return sendFile(res, 'otherpage.html', 'text/html');
+    case '/otherotherpage':
+      return sendFile(res, 'otherotherpage.html', 'text/html');
+    case '/css/style.css':
+      return sendFile(res, 'css/style.css', 'text/css');
+    case '/js/main.js':
+      return sendFile(res, 'js/main.js', 'text/javascript');
+
+    case '/api': {
+      // Read `student` from query string, e.g. /api?student=leon
+      const student = parsedUrl.searchParams.get('student');
+
+      // Build response data based on query value
+      const data = student === 'leon'
+        ? { name: 'leon', status: 'Boss Man', currentOccupation: 'Baller' }
+        : { name: 'unknown', status: 'unknown', currentOccupation: 'unknown' };
+
+      return sendJSON(res, data);
+    }
+
+    // Any unmatched path gets a 404
+    default:
+      return send404(res);
+  }
+}).listen(8000); // Start server on port 8000
+
+*/
