@@ -51,12 +51,14 @@ http.createServer((req, res) => {
       return sendFile(res, 'js/main.js', 'text/javascript');
 
     case '/api': {
+
       // Read `student` from query string, e.g. /api?student=leon
       const student = parsedUrl.searchParams.get('student');
 
       // Build response data based on query value
+      let flipRes = Math.ceil(Math.random() * 2) === 1 ? 'heads' : 'tails' // Coin flip
       const data = student === 'leon'
-        ? { name: 'leon', status: 'Boss Man', currentOccupation: 'Baller' }
+        ? { name: 'leon', status: 'Boss Man', currentOccupation: 'Baller', flip: flipRes}
         : { name: 'unknown', status: 'unknown', currentOccupation: 'unknown' };
 
       return sendJSON(res, data);
